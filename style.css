@@ -1,0 +1,135 @@
+*{
+    font-family: "Red Hat Text", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(13, 31%, 94%);
+}
+.container{
+    margin: 50px 100px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas: "product product product product cart cart";
+    column-gap: 70px;
+}
+.container .products{
+    grid-area: product;
+}
+.container .products h2{
+    color: hsl(14, 65%, 9%);
+    font-size: 30px;
+}
+/* ///////////// menu ////////////////// */
+.container .products #menu{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 15px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+}
+.container .products #menu .product{
+    width: 30%;
+}
+.container .products  #menu .product img{
+    width:100%;
+    border-radius: 10px;
+}
+.container .products  #menu .product .image{
+        position: relative;
+}
+
+.container .products #menu .product button{
+    position: absolute;
+    left: 50%;
+    bottom:-15px;
+    transform: translateX(-50%);
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    color: hsl(14, 65%, 9%);
+    font-weight: 600;
+    border: 1px solid hsl(14, 86%, 42%);
+    cursor: pointer;
+}
+.container .products #menu .product button .add{
+    color: hsl(14, 86%, 42%);
+    margin-right: 10px;
+    
+}
+.container .products #menu .product button:hover{
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(20, 50%, 98%);
+}
+.container .products #menu .product button:hover .add{
+    color: hsl(20, 50%, 98%);
+}
+.container .products #menu .product .cart-dis{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 30px;
+}
+.container .products #menu .product .cart-dis .name{
+    color:  hsl(7, 20%, 60%);
+}
+.container .products #menu .product .cart-dis .dis{
+    color:  hsl(14, 65%, 9%);
+    font-weight: 600;
+}
+.container .products #menu .product .cart-dis .price{
+    color:  hsl(14, 86%, 42%);
+    font-weight: 600;
+}
+
+/* ////////////////////// */
+.container .cart{
+    grid-area: cart;
+    background-color: hsl(20, 50%, 98%);
+    padding: 20px;
+    border-radius: 10px;
+}
+.container .cart h3{
+    color: hsl(14, 86%, 42%);
+}
+.container .cart #your-cart{
+    margin-top: 20px;
+}
+.container .cart #your-cart .empty{
+    text-align: center;
+    margin-top: 50px;
+    color: hsl(14, 25%, 72%);
+}
+.container .cart #your-cart .your-cart-product{
+    margin-bottom: 20px;
+    position: relative;
+    line-height: 25px;
+    border: 1px solid;
+    border-color:transparent transparent  hsl(14, 25%, 72%) transparent;
+}
+.container .cart #your-cart .your-cart-product button{
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px dotted hsl(12, 20%, 44%);
+    color: hsl(12, 20%, 44%);
+    cursor: pointer;
+}
+.container .cart #your-cart .name{
+    font-weight: 600;
+    color: hsl(14, 65%, 9%);
+}
+.container .cart #your-cart .price{
+    font-size: 14px;
+    font-weight: 600;
+    color: hsl(7, 20%, 60%);
+    margin-left: 10px;
+}
