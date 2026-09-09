@@ -65,6 +65,7 @@ add();
 // //////////////////////////////////////
 let yourCart =document.getElementById("your-cart");
 let cart =[]
+let count = document.getElementById("count")
 function addToCart(id){
     let product = list.find(function(item){
         return item.id == id
@@ -75,6 +76,7 @@ function addToCart(id){
 function add2(){
     let products = cart.map(drewItem2);
     yourCart.innerHTML = products.join("")
+    count.innerHTML = cart.length
 }
 function drewItem2(item){
     return `<div class="your-cart-product">
