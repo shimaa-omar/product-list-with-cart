@@ -95,13 +95,13 @@ body{
 .container .cart h3{
     color: hsl(14, 86%, 42%);
 }
+.container .cart #your-cart{
+    margin-top: 20px;
+}
 .container .cart #your-cart .empty{
     text-align: center;
     margin-top: 50px;
     color: hsl(14, 25%, 72%);
-}
-.container .cart #your-cart{
-    margin-top: 20px;
 }
 .container .cart #your-cart .your-cart-product{
     margin-bottom: 20px;
